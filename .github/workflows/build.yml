@@ -49,6 +49,7 @@ jobs:
 
       - name: Cloning Kernel Source
         run: |
+          rm -r /home/runner/work/4.14-kernel_build/4.14-kernel_build/anykernel
           git clone --single-branch --depth=1 --no-tags ${{ github.event.inputs.KERNEL_SOURCE }} -b ${{ github.event.inputs.KERNEL_BRANCH }} ${{ github.workspace }}
 
       - name: Cloning Toolchain
