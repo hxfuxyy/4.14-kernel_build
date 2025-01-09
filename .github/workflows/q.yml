@@ -104,6 +104,7 @@ jobs:
             make -j$(nproc --all) \
               O="${objdir}" \
               ARCH="${arch}" \
+              LOCALVERSION="-SodiumX1" \
               SUBARCH=arm64 \
               DTC_EXT=dtc \
               CC=clang \
